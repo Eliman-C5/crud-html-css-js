@@ -1,0 +1,159 @@
+:root {
+  --principal-color: rgb(218, 217, 217);
+  --add-delete: rgb(146, 187, 248);
+  --body: rgb(172, 193, 226);
+  --update: rgb(32, 47, 94);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 1rem;
+  background-color: var(--body);
+}
+
+.title {
+  text-align: center;
+  margin: 2rem;
+  font-size: 2rem;
+}
+
+.principal {
+  background-color: var(--principal-color);
+  width: 60vw;
+  display: inherit;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.principal-information {
+  margin: 1rem 0;
+  width: 40%;
+}
+
+input {
+  outline: none;
+}
+
+.principal-information > label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.principal-information li {
+  list-style: none;
+}
+
+.principal-information:first-child {
+  margin: 1.5rem 0 0 0;
+}
+
+.btn-box {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+button[id="add"],
+button[id="update"] {
+  color: #fff;
+  width: 35%;
+  padding: 0.4rem 0;
+  margin: 1rem 0 1.5rem 1rem;
+  transition-duration: 0.35s;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button[id="update"] {
+  background-color: var(--update);
+}
+
+button[id="add"] {
+  background-color: var(--add-delete);
+}
+
+button[id="add"]:hover,
+button[class="delete"]:hover {
+  opacity: 0.5;
+}
+
+button[class="blocked"] {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.people-list {
+  margin: 1.5rem auto;
+  font-size: 1.8rem;
+}
+
+.table-container {
+  background-color: var(--principal-color);
+  width: 60vw;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.5rem;
+  flex-wrap: wrap;
+}
+
+.table-list {
+  flex-grow: 2;
+}
+
+.row-body td {
+  text-align: center;
+}
+
+.delete,
+.update {
+  padding: 0.4rem 0.9rem;
+  margin: 0 0.8rem;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition-duration: 0.35s;
+  border-radius: 8px;
+  flex-shrink: 2;
+}
+
+.delete {
+  background-color: var(--add-delete);
+}
+
+.update {
+  background-color: var(--update);
+}
+
+.update:hover,
+button[id="update"]:hover {
+  filter: contrast(2);
+}
+
+@media screen and (max-width: 800px) {
+  .principal {
+    width: 65vw;
+    padding: 0 1rem 0 0;
+  }
+
+  .btn-box {
+    width: 100%;
+  }
+
+  .table-list {
+    flex-basis: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .delete,
+  .update {
+    flex-basis: 40%;
+    margin: 0 auto 0.5rem auto;
+  }
+}

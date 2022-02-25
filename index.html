@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic CRUD with HTML-CSS-JS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2 class="title">Record Machine</h2>
+
+    <form class="principal">
+
+      <div class="principal-information">
+        <label for="name"><b>Name:</b></label>
+        <input type="text" name="name" id="name" placeholder="Name">
+      </div>
+
+      <div class="principal-information">
+        <label for="birthday"><b>Birthday date:</b></label>
+        <input type="date" name="birthday" id="birthday" value="2000-05-19">
+      </div>
+
+      <div class="principal-information">
+        <h4>Gender:</h4>
+        <li>
+          <ul>
+            <input type="checkbox" name="male" id="male">
+            <label for="">Male</label>
+          </ul>
+          <ul>
+            <input type="checkbox" name="female" id="female">
+            <label for="">Female</label>
+          </ul>
+        </li>
+      </div>
+
+      <div class="btn-box">
+        <button id="add">
+          Add
+        </button>
+        
+        <button id="update">
+          Update
+        </button>
+      </div>
+
+    </form>
+
+    <h2 class="people-list">List of people:</h2>
+
+    <div class="table-parent"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
