@@ -157,3 +157,18 @@ button[id="update"]:hover {
     margin: 0 auto 0.5rem auto;
   }
 }
+
+@media screen and (max-width: 414px) {
+  .principal {
+    width: 75vw;
+  }
+  .principal-information {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .principal-information {
+    width: 75%;
+  }
+}
